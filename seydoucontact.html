@@ -40,37 +40,64 @@
             <h3>La réussite est au bout de l'effort !</h3>
         </section>
 
-        <!-- PRÉSENTATION & RÉSUMÉ -->
-        <section class="profil">
-            <h2 class="profil-titre">Seydou Bakhayokho - Full-Stack Developer à l'UNCHK</h2>
+        <!-- SECTION CONTACT -->
+        <section class="contact-section">
+            <h2>Contactez-moi</h2>
+            
+            <!-- Informations de contact -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <p>Email : seydoubakhayokho1@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <p>Localisation : Dakar, Sénégal</p>
+                </div>
+                <div class="contact-item">
+                    <i class="bi bi-mortarboard"></i>
+                    <p>Université : UNCHK</p>
+                </div>
+            </div>
 
-            <div class="resume-project-container">
-                <div class="box">
-                    <h2>Résumé</h2>
-                    <a href="seydou.html">Voir plus</a>
+            <!-- Réseaux sociaux -->
+            <div class="social-links">
+                <h3>Retrouvez-moi sur les réseaux sociaux</h3>
+                <div class="reseaux-sociaux">
+                    <a href="https://www.instagram.com/princeseydoubhk/" target="_blank" class="icon"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343/" target="_blank" class="icon"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com/watch/?v=1067769345116869" target="_blank" class="icon"><i class="bi bi-facebook"></i></a>
                 </div>
-                <div class="box">
-                    <h2>Projets</h2>
-                    <a href="seydouproject.html">Voir plus</a>
-                </div>
+            </div>
+            
+            <!-- Formulaire de contact -->
+            <div class="contact-form-container">
+                <h3>Envoyez-moi un message</h3>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer le message</button>
+                </form>
             </div>
         </section>
 
-                        <!-- Rubrique Contact -->
-    <section class="contact-section">
-        <h2>Contactez-nous</h2>
-        
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Votre nom" required />
-            <input type="email" name="email" placeholder="Votre email" required />
-            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
-            <!-- footer -->
-        </section>
+        <!-- FOOTER -->
         <footer class="footer">
-            <p>© 2025 - Seydou Bakhayokho</p>
+            <p> 2025 - Seydou Bakhayokho</p>
             <nav>
                 <a href="#">Privacy</a>
                 <a href="#">Terms</a>
@@ -78,5 +105,14 @@
             </nav>
         </footer>
     </main>
+
+    <!-- Script pour la validation du formulaire -->
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
