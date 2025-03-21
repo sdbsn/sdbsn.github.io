@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="travail, persévérance, rigueur, développeur web, full-stack, UNCHK">
+    <meta name="description" content="Seydou Bakhayokho - Full-Stack Developer à l'UNCHK. Découvrez mon parcours et mes compétences.">
+    <title>Résumé - Seydou Bakhayokho</title>
+
+    <!-- Lien vers Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+
+    <!-- Lien vers les icônes Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Lien vers le fichier CSS principal -->
+    <link rel="stylesheet" href="seydou.css">
+</head>
+<body>
+    <main class="contenu-principal">
+        <!-- SECTION TITRE -->
+        <section class="presentation">
+            <h1 class="titre-principal">SEYDOU BAKHAYOKHO</h1>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+            <ul class="menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="seydou.html" class="nav-link active">Résumé</a></li>
+                <li><a href="seydouproject.html" class="nav-link">Projets</a></li>
+                <li><a href="seydoucontact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- CITATION -->
+        <section class="citation">
+            <h3>La réussite est au bout de l'effort !</h3>
+        </section>
+
+        <!-- SECTION CV -->
+        <section class="cv-section fade-in">
+            <h2 class="profil-titre">Mon Parcours</h2>
+            
+            <!-- Formation -->
+            <div class="cv-block fade-in">
+                <h3><i class="bi bi-mortarboard"></i> Formation</h3>
+                <div class="cv-item">
+                    <h4>Université Cheikh Hamidou Kane (UNCHK)</h4>
+                    <p>Licence en Informatique</p>
+                    <p class="date">2023 - Présent</p>
+                </div>
+            </div>
+
+            <!-- Compétences -->
+            <div class="cv-block fade-in">
+                <h3><i class="bi bi-code-square"></i> Compétences Techniques</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Développement Web</h4>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> HTML5 & CSS3</li>
+                            <li><i class="bi bi-check-circle"></i> JavaScript</li>
+                            <li><i class="bi bi-check-circle"></i> Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Outils & Technologies</h4>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> Git & GitHub</li>
+                            <li><i class="bi bi-check-circle"></i> VS Code</li>
+                            <li><i class="bi bi-check-circle"></i> Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langues -->
+            <div class="cv-block fade-in">
+                <h3><i class="bi bi-translate"></i> Langues</h3>
+                <div class="languages">
+                    <div class="language-item">
+                        <span>Français</span>
+                        <div class="level">Courant</div>
+                    </div>
+                    <div class="language-item">
+                        <span>Anglais</span>
+                        <div class="level">Intermédiaire</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RÉSEAUX SOCIAUX -->
+        <section class="reseaux-sociaux">
+            <a href="https://www.instagram.com/princeseydoubhk/" target="_blank" class="icon"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343/" target="_blank" class="icon"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.facebook.com/watch/?v=1067769345116869" target="_blank" class="icon"><i class="bi bi-facebook"></i></a>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>&copy; 2024 - Seydou Bakhayokho</p>
+            <nav>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </nav>
+        </footer>
+    </main>
+
+    <!-- Script pour les animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

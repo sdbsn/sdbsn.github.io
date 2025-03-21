@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="travail, persévérance, rigueur">
-    <meta name="description" content="Seydou Bakhayokho - Full-Stack Developer à l'UNCHK">
-    <title>Profil - Seydou Bakhayokho</title>
+    <meta name="keywords" content="travail, persévérance, rigueur, développeur web, full-stack, UNCHK">
+    <meta name="description" content="Seydou Bakhayokho - Full-Stack Developer à l'UNCHK. Contactez-moi pour des opportunités de collaboration.">
+    <title>Contact - Seydou Bakhayokho</title>
 
     <!-- Lien vers Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="seydou.css">
 </head>
 <body>
-
     <main class="contenu-principal">
         <!-- SECTION TITRE -->
         <section class="presentation">
@@ -73,7 +72,7 @@
             <!-- Formulaire de contact -->
             <div class="contact-form-container">
                 <h3>Envoyez-moi un message</h3>
-                <form action="https://formspree.io/f/xeoaedpy" method="POST">
+                <form action="https://formspree.io/f/xeoaedpy" method="POST" class="contact-form">
                     <div class="form-group">
                         <label for="name">Nom complet</label>
                         <input type="text" id="name" name="name" placeholder="Votre nom" required />
@@ -86,14 +85,14 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
                     </div>
-                    <button type="submit">Envoyer le message</button>
+                    <button type="submit" class="submit-btn">Envoyer le message</button>
                 </form>
             </div>
         </section>
 
         <!-- FOOTER -->
         <footer class="footer">
-            <p> 2025 - Seydou Bakhayokho</p>
+            <p>&copy; 2024 - Seydou Bakhayokho</p>
             <nav>
                 <a href="#">Privacy</a>
                 <a href="#">Terms</a>
@@ -106,8 +105,25 @@
     <script>
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
-            this.reset();
+            const formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
+                    this.reset();
+                } else {
+                    throw new Error('Une erreur est survenue');
+                }
+            })
+            .catch(error => {
+                alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+            });
         });
     </script>
 </body>
